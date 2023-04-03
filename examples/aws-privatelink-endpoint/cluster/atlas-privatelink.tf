@@ -1,7 +1,7 @@
 resource "mongodbatlas_privatelink_endpoint" "pe_east" {
   project_id    = var.project_id
   provider_name = "AWS"
-  region        = "us-east-1"
+  region        = var.aws_region
 }
 
 resource "mongodbatlas_privatelink_endpoint_service" "pe_east_service" {

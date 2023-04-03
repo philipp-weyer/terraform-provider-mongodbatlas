@@ -10,3 +10,7 @@ locals {
 output "connection_string" {
   value = length(local.connection_strings) > 0 ? local.connection_strings[0] : ""
 }
+
+output "server_ip" {
+  value = aws_instance.server.public_ip
+}
